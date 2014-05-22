@@ -14,6 +14,12 @@
 #include "Poco/Net/HTTPRequest.h"
 #include "Poco/Net/HTTPResponse.h"
 
+//for mac
+#ifdef BYTE
+#else
+typedef unsigned char BYTE;
+#endif
+
 class ofxSonyRemoteCamera : public ofThread
 {
 public:
